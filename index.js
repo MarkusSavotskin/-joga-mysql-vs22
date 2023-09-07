@@ -36,6 +36,19 @@ con.connect(function (err) {
     console.log("Connected to mydb");
 })
 
+app.get('/', (req, res) => {
+    let query = 'SELECT * FROM article'
+    let articles = []
+    con.query(query, (err, result) => {
+        if (err) throw err
+        articles = result
+        console.log(articles)
+        res.render('index', {
+            articles: articles
+        })
+    })
+})
+
 app.listen(3000, () => {
     console.log('App started at http://localhost:3000')
 })
