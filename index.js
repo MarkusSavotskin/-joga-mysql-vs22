@@ -34,5 +34,5 @@ con.connect(function (err) {
 })
 
 app.listen(3000, () => {
-    console.log('App is started at http://localhost:3000')
+    console.log('App started at http://localhost:3000')
 })
