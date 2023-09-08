@@ -17,8 +17,6 @@ app.engine('hbs', hbs.engine({
 // setup static public directory
 app.use(express.static('public'))
 
-const mysql = require('mysql')
-
 const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({extended: true}))
 
