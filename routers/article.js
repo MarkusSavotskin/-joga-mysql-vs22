@@ -3,6 +3,8 @@ const router = express.Router()
 const articleController = require('../controllers/article')
 
 router.get('/', articleController.getAllArticles)
-router.get('/article/:slug', articleController.getArticleSlug)
+router.get('/:slug', articleController.getArticleSlug)
+router.get('/article/create', articleController.showNewArticleForm)
+router.post('/create', articleController.createNewArticle)
 
 module.exports = router
