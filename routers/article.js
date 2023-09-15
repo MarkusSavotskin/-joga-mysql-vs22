@@ -6,5 +6,7 @@ router.get('/', articleController.getAllArticles)
 router.get('/:slug', articleController.getArticleSlug)
 router.get('/article/create', articleController.showNewArticleForm)
 router.post('/create', articleController.createNewArticle)
+router.get('/article/edit/:id', articleController.updateArticle)
+router.post('/article/edit/:id', articleController.updateArticle)
 
 module.exports = router
